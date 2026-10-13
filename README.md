@@ -1,39 +1,69 @@
-# Briar
-Briar is a messaging app designed for activists, journalists, and anyone else who needs a safe, easy and robust way to communicate.
+# SalamaChat
 
-Unlike traditional messaging apps, Briar doesn't rely on a central server - messages are synchronized directly between the users' devices. 
+**Private, resilient messaging for Kenya and East Africa — built on Briar.**
 
-If the Internet's down, Briar can sync via Bluetooth or Wi-Fi, keeping information flowing in a crisis. If the Internet's up, Briar can sync via the Tor network, protecting users and their relationships from surveillance.
+SalamaChat is a community-driven effort to adapt the open-source [Briar](https://briarproject.org/) secure messaging app for people in Kenya and the wider East African region. The aim is to make private communication more approachable through thoughtful local language support, clear onboarding, and a visual identity that feels familiar to local users—without compromising Briar's security model.
 
-## Download Briar
+> **Project status:** Early-stage adaptation. This branch currently starts from the upstream **Briar 1.5.21 stable release**. SalamaChat-specific branding, translations, and other adaptations are planned work, not features that should be assumed to exist already. The baseline has not yet been independently built and tested as SalamaChat.
 
-[<img src="https://briarproject.org//img/fdroid_badge.png"  width="240">](https://briarproject.org/fdroid)
-[<img src="https://briarproject.org/img/google_play_badge_web_generic.png"  width="240">](https://play.google.com/store/apps/details?id=org.briarproject.briar.android)
+## What we want to build
 
-You can also [download the APK file](https://briarproject.org/apk) directly from
-our site.
+- **A Kenyan identity:** SalamaChat name, app icon, visual theme, and consistent in-app wording.
+- **Useful local language support:** high-quality English and Kiswahili, with translations reviewed by fluent speakers. Additional regional languages may be considered based on community contributions.
+- **Accessible onboarding:** plain-language explanations of accounts, passwords, contact setup, connectivity, and the limits of account recovery.
+- **Communication that works in difficult conditions:** retain Briar's peer-to-peer approach and its supported Tor-over-internet, Bluetooth, and local Wi-Fi transports. This matters when connectivity is unreliable or internet access is unavailable.
+- **Privacy and security first:** preserve end-to-end encryption and the upstream security design. Do not add advertising, tracking, a central message server, or home-grown cryptography as part of rebranding.
+- **Responsible maintenance:** follow stable upstream Briar releases, review security-relevant changes, and test before treating a build as ready for users.
 
-## Useful links
-[Project website](https://briarproject.org/)
+## What SalamaChat is—and is not
 
-[Source code](https://code.briarproject.org/briar/briar/tree/master)
+SalamaChat is an adaptation project based on Briar, not a new messaging protocol. It does not currently provide a SalamaChat-operated messaging server, and it should not be described as affiliated with the Kenyan government or any institution unless that relationship is formally established.
 
-[User manual](https://briarproject.org/manual/)
+Briar does not rely on a central server to relay messages. Devices synchronize directly. Internet synchronization uses Tor; nearby devices can synchronize using supported local transports such as Bluetooth or Wi-Fi. These transports have different range and availability constraints, and offline communication is not a guarantee that every contact can be reached at any distance.
 
-[Wiki](https://code.briarproject.org/briar/briar/-/wikis/home)
+Adding a distant contact generally requires exchanging Briar's contact link through another channel first. SalamaChat must explain this clearly rather than imply that users can automatically discover everyone.
 
-[Privacy policy](https://briarproject.org/privacy)
+## Development plan
 
-## Reproducible builds
+1. **Stable baseline:** track the latest official stable Briar release—not alpha, beta, or development commits.
+2. **Build and test:** establish a reproducible Android build and record the test results before changing app identity.
+3. **Branding:** update the app name, icon, visual theme, and user-facing references consistently.
+4. **Localization:** audit all user-facing strings, prepare English/Kiswahili translations, and arrange human review.
+5. **Kenyan usability:** test onboarding, contact exchange, data/connectivity explanations, accessibility, and background operation on real Android devices used locally.
+6. **Security and release readiness:** review the full diff from upstream, run available checks, document known limitations, and publish builds only after testing.
 
-We provide [docker images](https://code.briarproject.org/briar/briar-reproducer#briar-reproducer)
-to ease the task of verifying that the published APK binaries
-include nothing but our publicly available source code.
+Changes should be small enough to review, and security-sensitive upstream changes should not be skipped merely to preserve custom branding.
 
-You can either use those images or use them as a blueprint to build your own environment
-for reproduction.
+## Branching and upstream policy
 
-## Donate
+- **`master`:** production baseline; keep it aligned with a verified upstream stable release until a tested SalamaChat release is ready.
+- **`kenya-theme`:** integration branch for the planned SalamaChat branding, localization, and Kenya/East Africa usability work.
+- **Upstream updates:** use official stable release tags. Do not merge alpha, beta, or development commits into the stable baseline just because they are newer.
+- **Validation:** a version number or successful source update is not proof that the Android app builds or works. Record build and test results separately.
 
-[![Donate using Liberapay](https://briarproject.org/img/liberapay.svg)](https://liberapay.com/Briar/donate)   
-Bitcoin and BCH: 1NZCKkUCtJV2U2Y9hDb9uq8S7ksFCFGR6K
+## Build and contribute
+
+This is an Android project based on Briar's Gradle build. Use the project's Gradle wrapper and follow the build requirements documented by upstream. Do not claim a successful build until it has actually completed.
+
+Contributions are welcome, especially:
+- Kiswahili translation and review by fluent speakers;
+- usability feedback from Android users in Kenya and East Africa;
+- accessibility and low-connectivity testing;
+- reproducible build and test improvements;
+- careful documentation and security review.
+
+Please describe the device, Android version, app version, reproduction steps, and relevant logs when reporting a bug. **Do not publish private contact details, message contents, passwords, or other sensitive data in issues.** For suspected security vulnerabilities, use the responsible disclosure guidance provided by the upstream Briar project rather than posting exploit details publicly.
+
+## Upstream project and licensing
+
+SalamaChat derives from [Briar](https://briarproject.org/) and its source code: [upstream repository](https://github.com/briar/briar). Briar is free and open-source software. This fork must preserve the applicable upstream copyright notices, license terms, and third-party notices. Review the repository's license files before redistributing modified builds.
+
+Upstream project links:
+- [Briar website](https://briarproject.org/)
+- [Briar user manual](https://briarproject.org/manual/)
+- [Briar privacy policy](https://briarproject.org/privacy)
+- [Briar source code](https://github.com/briar/briar)
+
+---
+
+**Our goal:** make private, resilient communication easier to understand and use in Kenya and East Africa, while respecting the security work and community behind Briar.
