@@ -4,7 +4,7 @@
 
 SalamaChat is a community-driven effort to adapt the open-source [Briar](https://briarproject.org/) secure messaging app for people in Kenya and the wider East African region. The aim is to make private communication more approachable through clear English-language onboarding and a distinct Kenyan visual identity—without compromising Briar's security model.
 
-> **Project status:** Early-stage adaptation. This branch currently starts from the upstream **Briar 1.5.21 stable release**. SalamaChat-specific branding, translations, and other adaptations are planned work, not features that should be assumed to exist already. The baseline has not yet been independently built and tested as SalamaChat.
+> **Project status:** Early-stage adaptation based on the upstream **Briar 1.5.21 stable release**. The `kenya-theme` branch now includes an initial SalamaChat color system, launcher icon, English-only user-facing copy, and branded app labels. It remains a test adaptation; each build must pass CI and device checks before being treated as release-ready.
 
 ## What we want to build
 
@@ -27,7 +27,7 @@ Adding a distant contact generally requires exchanging Briar's contact link thro
 
 1. **Stable baseline:** track the latest official stable Briar release—not alpha, beta, or development commits.
 2. **Build and test:** establish a reproducible Android build and record the test results before changing app identity.
-3. **Branding:** update the app name, icon, visual theme, and user-facing references consistently.
+3. **Branding:** initial SalamaChat app name, launcher icon, forest-green/cream/gold visual theme, and English user-facing labels are implemented on `kenya-theme`.
 4. **English copy:** audit all user-facing strings for consistent, natural English and clear privacy explanations.
 5. **Kenyan usability:** test onboarding, contact exchange, data/connectivity explanations, accessibility, and background operation on real Android devices used locally.
 6. **Security and release readiness:** review the full diff from upstream, run available checks, document known limitations, and publish builds only after testing.
