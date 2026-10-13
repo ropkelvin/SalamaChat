@@ -2,14 +2,14 @@
 
 **Private, resilient messaging for Kenya and East Africa — built on Briar.**
 
-SalamaChat is a community-driven effort to adapt the open-source [Briar](https://briarproject.org/) secure messaging app for people in Kenya and the wider East African region. The aim is to make private communication more approachable through thoughtful local language support, clear onboarding, and a visual identity that feels familiar to local users—without compromising Briar's security model.
+SalamaChat is a community-driven effort to adapt the open-source [Briar](https://briarproject.org/) secure messaging app for people in Kenya and the wider East African region. The aim is to make private communication more approachable through clear English-language onboarding and a distinct Kenyan visual identity—without compromising Briar's security model.
 
 > **Project status:** Early-stage adaptation. This branch currently starts from the upstream **Briar 1.5.21 stable release**. SalamaChat-specific branding, translations, and other adaptations are planned work, not features that should be assumed to exist already. The baseline has not yet been independently built and tested as SalamaChat.
 
 ## What we want to build
 
 - **A Kenyan identity:** SalamaChat name, app icon, visual theme, and consistent in-app wording.
-- **Useful local language support:** high-quality English and Kiswahili, with translations reviewed by fluent speakers. Additional regional languages may be considered based on community contributions.
+- **English-only experience:** clear, consistent English throughout the app, with plain-language explanations for setup, contacts, connectivity, and account recovery.
 - **Accessible onboarding:** plain-language explanations of accounts, passwords, contact setup, connectivity, and the limits of account recovery.
 - **Communication that works in difficult conditions:** retain Briar's peer-to-peer approach and its supported Tor-over-internet, Bluetooth, and local Wi-Fi transports. This matters when connectivity is unreliable or internet access is unavailable.
 - **Privacy and security first:** preserve end-to-end encryption and the upstream security design. Do not add advertising, tracking, a central message server, or home-grown cryptography as part of rebranding.
@@ -28,7 +28,7 @@ Adding a distant contact generally requires exchanging Briar's contact link thro
 1. **Stable baseline:** track the latest official stable Briar release—not alpha, beta, or development commits.
 2. **Build and test:** establish a reproducible Android build and record the test results before changing app identity.
 3. **Branding:** update the app name, icon, visual theme, and user-facing references consistently.
-4. **Localization:** audit all user-facing strings, prepare English/Kiswahili translations, and arrange human review.
+4. **English copy:** audit all user-facing strings for consistent, natural English and clear privacy explanations.
 5. **Kenyan usability:** test onboarding, contact exchange, data/connectivity explanations, accessibility, and background operation on real Android devices used locally.
 6. **Security and release readiness:** review the full diff from upstream, run available checks, document known limitations, and publish builds only after testing.
 
@@ -46,7 +46,7 @@ Changes should be small enough to review, and security-sensitive upstream change
 This is an Android project based on Briar's Gradle build. Use the project's Gradle wrapper and follow the build requirements documented by upstream. Do not claim a successful build until it has actually completed.
 
 Contributions are welcome, especially:
-- Kiswahili translation and review by fluent speakers;
+- English-language usability feedback from Android users in Kenya and East Africa;
 - usability feedback from Android users in Kenya and East Africa;
 - accessibility and low-connectivity testing;
 - reproducible build and test improvements;
