@@ -1,4 +1,4 @@
-name: Build SalamaChat debug APK
+name: Build SalamaChat test APKs
 
 on:
   push:
@@ -23,7 +23,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: salamachat-debug-${{ github.ref }}
+  group: salamachat-test-apks-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -54,8 +54,43 @@ jobs:
       - name: Build SalamaChat debug APK
         run: ./gradlew --no-daemon --stacktrace :briar-android:assembleOfficialDebug
 
-      - name: Run Android unit tests
+      - name: Run Android debug unit tests
         run: ./gradlew --no-daemon --stacktrace :briar-android:testOfficialDebugUnitTest
+
+      - name: Build SalamaChat release-variant test APK
+        run: ./gradlew --no-daemon --stacktrace :briar-android:assembleOfficialRelease
+
+      # This temporary key is only for user testing. It is not a production signing key.
+      - name: Sign release-variant APK for testing
+        shell: bash
+        run: |
+          set -euo pipefail
+          APK="$(find briar-android/build/outputs/apk/official/release -maxdepth 1 -name '*unsigned.apk' -print -quit)"
+          if [ -z "$APK" ]; then
+            echo "Could not find the unsigned official release APK."
+            find briar-android/build/outputs/apk/official/release -maxdepth 1 -type f -print
+            exit 1
+          fi
+          keytool -genkeypair -noprompt -v \
+            -keystore "$RUNNER_TEMP/salamachat-test-release.jks" \
+            -storepass testpassword -keypass testpassword \
+            -alias salamachat-test -keyalg RSA -keysize 2048 -validity 10000 \
+            -dname "CN=SalamaChat Test,O=SalamaChat,C=KE"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" sign \
+            --ks "$RUNNER_TEMP/salamachat-test-release.jks" \
+            --ks-key-alias salamachat-test \
+            --ks-pass pass:testpassword --key-pass pass:testpassword \
+            --out "$RUNNER_TEMP/SalamaChat-release-test.apk" "$APK"
+          "$ANDROID_HOME/build-tools/35.0.0/apksigner" verify \
+            "$RUNNER_TEMP/SalamaChat-release-test.apk"
+
+      - name: Upload release-variant test APK (not production-signed)
+        uses: actions/upload-artifact@v4
+        with:
+          name: salamachat-release-variant-test-apk
+          path: ${{ runner.temp }}/SalamaChat-release-test.apk
+          if-no-files-found: error
+          retention-days: 14
 
       - name: Upload debug APK
         if: always()
