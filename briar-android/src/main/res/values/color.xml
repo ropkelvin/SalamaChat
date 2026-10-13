@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<color name="briar_lime_950">#283E0F</color>
-	<color name="briar_lime_600">#67a60f</color>
-	<color name="briar_lime_600_new">#65A30D</color>
-	<color name="briar_lime_500">#82C91E</color>
-	<color name="briar_lime_400">#82c91e</color>
-	<color name="briar_lime_400_new">#A3E635</color>
+	<color name="briar_lime_950">#08271F</color>
+	<color name="briar_lime_600">#0B5D43</color>
+	<color name="briar_lime_600_new">#0E7654</color>
+	<color name="briar_lime_500">#12805A</color>
+	<color name="briar_lime_400">#21A36F</color>
+	<color name="briar_lime_400_new">#43C58A</color>
 
-	<color name="briar_blue_900">#184080</color>
-	<color name="briar_blue_800">#134a81</color>
-	<color name="briar_blue_800_new">#1649A0</color>
-	<color name="briar_blue_600">#1b69b6</color>
-	<color name="briar_blue_600_new">#196FDE</color>
-	<color name="briar_blue_400">#418cd8</color>
-	<color name="briar_blue_400_new">#52ADF9</color>
-	<color name="briar_blue_300">#8BCAFD</color>
-	<color name="briar_blue_100">#DDEDFE</color>
+	<color name="briar_blue_900">#103C30</color>
+	<color name="briar_blue_800">#164C3B</color>
+	<color name="briar_blue_800_new">#1B5C45</color>
+	<color name="briar_blue_600">#176B4F</color>
+	<color name="briar_blue_600_new">#197A59</color>
+	<color name="briar_blue_400">#21845F</color>
+	<color name="briar_blue_400_new">#38A878</color>
+	<color name="briar_blue_300">#8ED6B4</color>
+	<color name="briar_blue_100">#DDF3E7</color>
 
-	<color name="briar_orange_200">#fed69f</color>
-	<color name="briar_orange_400">#FBBF24</color>
-	<color name="briar_orange_500">#fc9403</color>
-	<color name="briar_orange_500_new">#F59E0B</color>
+	<color name="briar_orange_200">#FFE5A8</color>
+	<color name="briar_orange_400">#F4B942</color>
+	<color name="briar_orange_500">#E5A526</color>
+	<color name="briar_orange_500_new">#F4B942</color>
 
-	<color name="briar_red_400">#f87171</color>
-	<color name="briar_red_500">#db3b21</color>
-	<color name="briar_red_500_new">#EF4444</color>
-	<color name="briar_red_600">#DC2626</color>
+	<color name="briar_red_400">#F17870</color>
+	<color name="briar_red_500">#B83227</color>
+	<color name="briar_red_500_new">#D9443C</color>
+	<color name="briar_red_600">#B83227</color>
 
-	<color name="briar_night_950">#0e171f</color>
-	<color name="briar_night_800">#212d3b</color>
-	<color name="briar_night_700">#2e3d4f</color>
-	<color name="briar_night_700_new">#334155</color>
-	<color name="briar_night_600">#475569</color>
-	<color name="briar_night_500">#435b77</color>
-	<color name="briar_night_100">#F1F5F9</color>
-	<color name="briar_night_50">#ebf3fa</color>
+	<color name="briar_night_950">#091A14</color>
+	<color name="briar_night_800">#10271F</color>
+	<color name="briar_night_700">#17372B</color>
+	<color name="briar_night_700_new">#214638</color>
+	<color name="briar_night_600">#365A49</color>
+	<color name="briar_night_500">#486B59</color>
+	<color name="briar_night_100">#E6F2EB</color>
+	<color name="briar_night_50">#F4FAF6</color>
 
-	<color name="briar_gray_900">#2e2e2e</color>
-	<color name="briar_gray_700">#374151</color>
-	<color name="briar_gray_500">#a7a7a7</color>
-	<color name="briar_gray_300">#cccccc</color>
-	<color name="briar_gray_200">#dfdfdf</color>
-	<color name="briar_gray_200_new">#E5E7EB</color>
-	<color name="briar_gray_100">#f2f2f2</color>
+	<color name="briar_gray_900">#17221D</color>
+	<color name="briar_gray_700">#34483E</color>
+	<color name="briar_gray_500">#87958D</color>
+	<color name="briar_gray_300">#C9D4CE</color>
+	<color name="briar_gray_200">#DEE7E1</color>
+	<color name="briar_gray_200_new">#E5EEE8</color>
+	<color name="briar_gray_100">#FFF9EF</color>
 
-	<color name="briar_brand_blue">@color/briar_night_700</color>
-	<color name="briar_brand_green">@color/briar_lime_400</color>
+	<color name="briar_brand_blue">#0B3D2E</color>
+	<color name="briar_brand_green">#21A36F</color>
 
-	<color name="briar_primary">@color/briar_brand_blue</color>
-	<color name="briar_primary_dark">@color/briar_night_950</color>
-	<color name="briar_accent">@color/briar_brand_blue</color>
+	<color name="briar_primary">#0B3D2E</color>
+	<color name="briar_primary_dark">#091A14</color>
+	<color name="briar_accent">#0E7654</color>
 
 	<color name="window_background">@color/briar_gray_100</color>
 	<color name="card_background">@color/cardview_light_background</color>
@@ -101,19 +101,19 @@
 
 
 
-	<color name="md_theme_primary">@color/briar_lime_500</color>
-	<color name="md_theme_onPrimary">@color/briar_lime_950</color>
-	<color name="md_theme_primaryContainer">@color/briar_night_700</color>
-	<color name="md_theme_onPrimaryContainer">@android:color/white</color>
-	<color name="md_theme_inversePrimary">#98DA27</color>
-	<color name="md_theme_secondary">@color/briar_night_700</color>
-	<color name="md_theme_onSecondary">@android:color/white</color>
-	<color name="md_theme_tertiaryContainer">@color/briar_blue_100</color>
-	<color name="md_theme_onTertiaryContainer">@color/briar_blue_600_new</color>
-	<color name="md_theme_tertiary">@color/briar_blue_600_new</color>
-	<color name="md_theme_onTertiary">@android:color/white</color>
-	<color name="md_theme_onBackground">#191D12</color>
-	<color name="md_theme_onSurface">#191D12</color>
-	<color name="md_theme_surfaceDim">@color/briar_gray_200_new</color>
-	<color name="md_theme_error">@color/briar_red_600</color>
+	<color name="md_theme_primary">#12805A</color>
+	<color name="md_theme_onPrimary">#FFFFFF</color>
+	<color name="md_theme_primaryContainer">#DDF3E7</color>
+	<color name="md_theme_onPrimaryContainer">#12372A</color>
+	<color name="md_theme_inversePrimary">#43C58A</color>
+	<color name="md_theme_secondary">#F4B942</color>
+	<color name="md_theme_onSecondary">#2A2110</color>
+	<color name="md_theme_tertiaryContainer">#FFE5A8</color>
+	<color name="md_theme_onTertiaryContainer">#6E2C1D</color>
+	<color name="md_theme_tertiary">#B83227</color>
+	<color name="md_theme_onTertiary">#FFFFFF</color>
+	<color name="md_theme_onBackground">#17221D</color>
+	<color name="md_theme_onSurface">#17221D</color>
+	<color name="md_theme_surfaceDim">#E5EEE8</color>
+	<color name="md_theme_error">#B83227</color>
 </resources>
