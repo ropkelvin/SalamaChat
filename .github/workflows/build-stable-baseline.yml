@@ -1,3 +1,4 @@
+# This workflow intentionally builds the untouched upstream stable baseline before product changes.
 name: Build Briar 1.5.21 stable baseline
 
 on:
