@@ -39,4 +39,15 @@
 	<color name="md_theme_onSurface">#E8F2EC</color>
 	<color name="md_theme_surfaceDim">#214638</color>
 	<color name="md_theme_error">#F17870</color>
+	<color name="briar_text_primary">#E8F2EC</color>
+	<color name="briar_text_link">#43C58A</color>
+	<color name="briar_button_text_positive">#43C58A</color>
+	<color name="briar_button_text_negative">#F17870</color>
+	<color name="md_theme_primary">#43C58A</color>
+	<color name="md_theme_onPrimary">#08271F</color>
+	<color name="md_theme_primaryContainer">#17372B</color>
+	<color name="md_theme_onPrimaryContainer">#E8F2EC</color>
+	<color name="md_theme_inversePrimary">#21A36F</color>
+	<color name="md_theme_secondary">#F4B942</color>
+	<color name="md_theme_onSecondary">#2A2110</color>
 </resources>
