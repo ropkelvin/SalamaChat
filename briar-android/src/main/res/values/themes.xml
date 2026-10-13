@@ -18,9 +18,10 @@
 		<item name="colorOnSurface">@color/md_theme_onSurface</item>
 		<item name="colorSurfaceDim">@color/md_theme_surfaceDim</item>
 		<item name="colorError">@color/md_theme_error</item>
-		<item name="android:statusBarColor">#000000</item>
+		<item name="android:statusBarColor">@color/briar_primary_dark</item>
 
 		<item name="android:windowBackground">@color/window_background</item>
+		<item name="android:navigationBarColor">@color/window_background</item>
 		<item name="android:textColorLink">@color/briar_text_link</item>
 		<item name="android:windowAnimationStyle">@style/ActivityAnimation</item>
 		<item name="windowActionModeOverlay">true</item>
